@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-<div class="main">
-  {% block content %}
-  <h1>
-    This is my blog made with Zola.
-  </h1>
-  <p>Click <a href="{{ get_url(path='@/blog/_index.md') }}">here</a> to see my posts.</p>
-  {% endblock %}
-</div>
+
+{% block content %}
+<h1>
+  This is my blog made with Zola.
+</h1>
+<p>Click <a href="{{ get_url(path='@/blog/_index.md') }}">here</a> to see my posts.</p>
+{% endblock %}
+
 <!-- {% include "posts.html" %}
 {% include "footer.html" %}
 {% include "script-1.html" %}
