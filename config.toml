@@ -14,3 +14,10 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+navigation = [
+    { name = "Home", url = "/" },
+    { name = "Blog", url = "/blog" },
+    # tag is not a zola section, it's just a link.
+    # { name = "tags", url = "$LANG_BASE_URL/tags" },
+    # { name = "About", url = "/about"},
+]

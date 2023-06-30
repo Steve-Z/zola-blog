@@ -1,4 +1,14 @@
+
+<!-- <nav class="reverse-colors"> -->
+
 <nav>
   <div class="pad-sides flex-nav-container">
+    {% for item in config.extra.navigation %}
+      <div>
+        <a href="{{ item.url }}">
+          {{ item.name }}
+        </a>
+      </div>
+    {% endfor %}
   </div>
 </nav>
