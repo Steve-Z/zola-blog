@@ -1,0 +1,320 @@
+
+@import "colors";
+$theme-name: $adobe-3;
+
+/***********
+*  COLORS  *
+************/
+$bodyBackground: map-get($theme-name, "color-5");
+$bodyColor: #000000;
+$headerHeadingColor: map-get($theme-name, "color-1");
+$headingsColor: map-get($theme-name, "color-3");
+$linkColor: map-get($theme-name, "color-3");
+$footerBackground: map-get($theme-name, "color-1");
+$footerColor: map-get($theme-name, "color-5");
+$hrBorderTop: map-get($theme-name, "color-1");
+$navBackground: map-get($theme-name, "color-5");
+$navColor: map-get($theme-name, "color-3" );
+$cardBackground: #ffffff;
+$border-shadow: map-get($theme-name, "color-3");
+$reverseBackground: map-get($theme-name, "color-1");
+$reverseColor: #ffffff;
+
+// $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+* {
+  box-sizing: border-box;
+}
+body, html {
+  font-size: 18px;
+}
+body {
+  background-color: $bodyBackground;
+  color: $bodyColor;
+  // font-family: $bodyFont;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+header > h1 {
+  // color: #4424D6;
+  color: $headerHeadingColor;
+  font-size: 4em;
+  font-weight: 700;
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+  color: $headingsColor;
+}
+a {
+  text-decoration: none;
+}
+/* a:hover MUST come after a:link and a:visited */
+/* a:active MUST come after a:hover */
+a:link, a:visited {
+  color: inherit;
+}
+a:hover {
+  color: $linkColor; // #4424D6;
+  border-bottom: solid 3px $linkColor; // #4424D6;
+}
+nav.reverse-colors a:hover, footer a:hover {
+  color: inherit;
+  border-bottom: solid 3px #ffffff;
+}
+a:hover.card {
+  border-bottom: none;
+}
+a:active {
+  color: inherit;
+}
+article > img {
+  float: left;
+  margin-right: 1em;
+}
+article p > img {
+  float: right;
+  margin-left: 1em;
+}
+button {
+  color: $reverseColor;
+  background-color: $reverseBackground;
+  border: 1px solid $reverseBackground;
+  border-radius: 4px;
+  font-size: 1.1em;
+}
+footer {
+  color: $footerColor;
+  background-color: $footerBackground;
+}
+hr {
+  color: map-get($theme-name, "color-5"); // $bodyBackground;
+  border-top: 4px solid $hrBorderTop;
+}
+input, textarea {
+  border: 1px solid $reverseBackground;
+  border-radius: 2px;
+  font-size: 1em;
+}
+nav {
+  font-size: 1.1em;
+  // background-color: #B2D732;
+  color: $navColor;
+  background-color: $navBackground; // #ffffff;
+  padding: 0.5rem 0;
+}
+// ul {
+//   list-style-type: none;
+// }
+
+// From w3.css .w3-animate-opacity
+.animate-opacity {
+  position: relative;
+  animation: opac 1.2s;
+}
+@keyframes opac {
+  from{opacity: 0} to {opacity: 1};
+}
+.bg-img-home {
+  height: 20em;
+  background-position: center;
+  // padding-top: 2.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../images/LabuanBajo.jpg');
+}
+.bg-img-blog {
+  height: 18em;
+  background-position: center;
+  // padding-top: 2.8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../images/LakeBled.jpg');
+}
+// .bg-img-logo {
+//   height: 80px;
+//   width: 100px;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-image: url('../images/boot_logo_small.jpg');
+// }
+
+/* Not necessary if not using .card in blog post. */
+// .blog-post {
+//   background-color: $bodyBackground !important;
+//   align-items: flex-end;
+// }
+
+/* Only need > p negative margin if image used in body content & wrapped in <p></p> */
+.card {
+  background-color: $cardBackground;
+  width: min-content;
+  margin: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+  // > p {
+  //   margin: 0 0 -0.333em 0;
+  // }
+}
+@media (max-width: 359px) {
+  .card {
+    width: 100vw;
+    margin: 0.5em 0;
+  }
+  .card > img {
+    width: 100vw;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+}
+.card > * {
+  &:last-child {
+    padding: 1em;
+    flex: 1 1 40%;
+  }
+}
+.flex-archive {
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: center;
+}
+.flex-arch-date {
+  flex: 0 1 8em;
+}
+.flex-arch-post {
+  flex: 0 1 24em;
+}
+.flex-arch-space {
+  flex: 0 0 100%;
+  height: 0.5em;
+}
+.flex-nav-container { // .flex-footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-nav-container > * {
+  flex: 0 1 6em;
+  text-align: center;
+}
+.flex-footer-container {
+  display: flex;
+  flex-direction: column;
+}
+.flex-footer-container > * {
+  align-self: center;
+}
+// .flex-footer-container {
+//   justify-content: center;
+// }
+// .flex-nav-container :last-child {
+//   flex: 0 0 auto;
+// }
+.fluid-type {
+  font-size: 0.75rem;
+}
+@media (min-width: 750px) { /* and (min-height: 500px) { */
+  .fluid-type {
+      font-size: calc(13.5px + 4.5 * (100vw - 750px) / 274);
+  }
+}
+@media (min-width: 1024px) { /*, (min-height: 1300px) { */
+  .fluid-type {
+      font-size: 1rem;
+  }
+}
+.footer {
+  grid-column: 1 / -1;
+  padding: 1em;
+  margin-top: 1em;
+  grid-row-start: footer-start;
+  grid-row-end: footer-end;
+}
+.grid-container {
+  display: grid;
+  column-gap: 1em;
+  /* row-gap: 1em; */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: [logo-start] 80px [nav-start] 2.5em [header-start] auto [main-start] auto 
+                        [post-list-start] minmax(15vh,auto) [footer-start] minmax(5em,auto)
+                          [footer-end];
+}
+.header {
+  grid-column: 1 / -1;
+  grid-row-start: header-start;
+  grid-row-end: main-start;
+}
+.logo-container {
+  grid-column: 1 / -1;
+  grid-row-start: logo-start;
+  grid-row-end: nav-start;
+  justify-self: center;
+  align-self: center;
+  padding-top: 20px;
+}
+.main, .post-list {
+  // background-color: #fff;
+  grid-column: 1 / -1;
+  padding: 0 0.5em;
+  max-width: 100vw;
+}
+.main {
+  grid-row-start: main-start;
+  grid-row-end: post-list-start;
+}
+.post-list {
+  grid-row-start: post-list-start;
+  grid-row-end: footer-start;
+}
+@media (min-width: 500px) {
+  .main, .post-list {
+    // background-color: #fff;
+    grid-column: 2 / -2;
+    padding: 0 1em;
+    max-width: 100vw;
+  }
+}
+.nav-bar {
+  grid-column: 1 / -1;
+  grid-row-start: nav-start;
+  grid-row-end: header-start;
+}
+.pad-sides {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+}
+.post-nav {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.reverse-colors {
+  color: $reverseColor;
+  background-color: $reverseBackground;
+}
+.sticky-top {
+  top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+}
+.tag {
+  border: solid 1px #000000;
+  border-radius: 3px;
+  padding: 0 0.5em;
+}
