@@ -18,10 +18,12 @@
       <div class="nav-bar sticky-top">
         {% include "navigation.html" %}
       </div>
+      {% include "header.html" %}
       <div class="main">
         {% block content %} {% endblock %}
       </div>
       {% include "footer.html" %}
     </div>
+    {% include "script-2.html" %}
   </body>
 </html>
