@@ -2,7 +2,7 @@
 title = "Sometimes it Snows in April"
 date = "2020-04-30"
 [extra]
-featured_img = "/images/img_2366.jpg"                      
+featured_img = "/images/april_snow.jpg"                      
 +++
 
 Sometimes it snows in April. I do not have much else to say yet. Just testing this out.
