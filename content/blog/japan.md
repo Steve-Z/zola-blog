@@ -1,6 +1,8 @@
 +++
 title = "My Trip to Japan"
 date = "2020-04-30"
+[extra]
+featured_img = "/images/golden_temple_small.jpg"
 +++
 
 I once took a trip to Japan. It was great. I took lots of photos and saw some really cool sights.

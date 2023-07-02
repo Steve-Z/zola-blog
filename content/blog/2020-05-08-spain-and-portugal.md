@@ -1,5 +1,7 @@
 +++
 title = "Spain and Portugal"
+[extra]
+featured_img = "/images/plaza_de_espana_small.jpg"
 +++
 
 In the spring of 2016 we toured Andalucía and southern Portugal. We traveled to Málaga, Granada, Sevilla, Córdoba, the Algarve, and Lisbon. It was a great trip.
