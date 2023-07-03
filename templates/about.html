@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-    For now the only page here is "About Me".
+    For now the only page here is
+    <a class="like-hover" href="{{ get_url(path='@/about/me.md') }} ">About Me.</a>
 </div>
 {% endblock %}
