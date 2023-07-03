@@ -1,0 +1,14 @@
+
+<div class="post-list">
+{% for page in section.pages %}
+  <div class="card">
+    <img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}"/>
+    <div>
+      <h2><a href="{{ page.permalink  | safe }}">{{ page.title }}</a></h2>
+      <p>{{ page.date }}</p>
+      <!-- not sure why this is needed -->
+      {{ page.summary | trim_start_matches(pat="<p>") }}
+    </div>
+  </div>
+{% endfor %}
+</div>
