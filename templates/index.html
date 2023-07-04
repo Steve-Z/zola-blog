@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>
-  This is my blog made with Zola.
-</h1>
-<p>Click <a href="{{ get_url(path='@/blog/_index.md') }}">here</a> to see my posts.</p>
-{% endblock %}
+<h2 id="my-awesome-jekyll-blog">
+  Recent Posts
+</h2>
+{% endblock content %}
+<!-- <p>Click <a href="{{ get_url(path='@/blog/_index.md') }}">here</a> to see my posts.</p> -->
+{% block postlist %}
+{% include "posts.html" %}
+{% endblock postlist %}
 

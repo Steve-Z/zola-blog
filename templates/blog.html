@@ -10,5 +10,7 @@
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   {% endfor %}
 </ul> -->
-{% include "posts.html" %}
 {% endblock content %}
+{% block postlist %}
+{% include "posts.html" %}
+{% endblock postlist %}

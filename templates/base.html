@@ -20,8 +20,9 @@
       </div>
       {% include "header.html" %}
       <div class="main">
-        {% block content %} {% endblock %}
+        {% block content %} {% endblock content %}
       </div>
+      {% block postlist %} {% endblock postlist %}
       {% include "footer.html" %}
     </div>
     {% include "script-2.html" %}
