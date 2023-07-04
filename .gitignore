@@ -1,4 +1,6 @@
 .DS_Store
 public
 .netlify
+
+# Files I create for troubleshooting
 tera_context*
