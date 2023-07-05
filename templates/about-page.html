@@ -1,5 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}"/>
-{{ page.content | safe }}
-{% endblock %}

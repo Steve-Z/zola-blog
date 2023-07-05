@@ -1,7 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-<div>
-    For now the only page here is
-    <a class="like-hover" href="{{ get_url(path='@/about/me.md') }} ">About Me.</a>
-</div>
+<img src="{{ section.extra.featured_img }}" alt="{{ section.extra.featured_img | split(pat='/') | last }}"/>
+{{ section.content | safe }}
 {% endblock %}
