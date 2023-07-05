@@ -12,8 +12,7 @@
     <div>
       <h2><a href="{{ page.permalink  | safe }}">{{ page.title }}</a></h2>
       <p>{{ page.date }}</p>
-      <!-- not sure why this is needed -->
-      {{ page.summary | trim_start_matches(pat="<p>") }}
+      {{ page.summary | safe }}
     </div>
   </div>
 {% endfor %}
