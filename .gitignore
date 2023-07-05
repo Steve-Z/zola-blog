@@ -4,3 +4,7 @@ public
 
 # Files I create for troubleshooting
 tera_context*
+
+# Files created for testing colors
+/content/colors
+colors.html
