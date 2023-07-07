@@ -16,7 +16,7 @@
         <img src="/images/boot_logo.png" alt="boot_logo">
       </div>
       <div class="nav-bar sticky-top">
-        {# formerly "navigation.html" #}
+        {#- formerly "navigation.html" -#}
         <nav>
           <div class="pad-sides flex-nav-container">
             {% for item in config.extra.navigation %}
@@ -29,15 +29,15 @@
           </div>
         </nav>
       </div>
-      {# formerly "header.html" #}
-      {% if current_path == "/" %}
+      {#- formerly "header.html" -#}
+      {%- if current_path == "/" %}
       <header class="header bg-img-home">
         <h1>My Zola Blog</h1>
       </header>
-      {% elif current_path == "/blog/" %}
+      {%- elif current_path == "/blog/" %}
       <header class="header bg-img-blog">
       </header>
-      {% else %}
+      {%- else %}
       <header class="header">
       </header>
       {% endif %}
