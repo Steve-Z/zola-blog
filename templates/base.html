@@ -8,23 +8,69 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico">
-    <!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -->
+    {#- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -#}
   </head>
   <body>
     <div class="grid-container fluid-type">
       <div class="logo-container">
         <img src="/images/boot_logo.png" alt="boot_logo">
-       </div>
-      <div class="nav-bar sticky-top">
-        {% include "navigation.html" %}
       </div>
-      {% include "header.html" %}
+      <div class="nav-bar sticky-top">
+        {# formerly "navigation.html" #}
+        <nav>
+          <div class="pad-sides flex-nav-container">
+            {% for item in config.extra.navigation %}
+            <div>
+              <a href="{{ item.url }}">
+                {{ item.name }}
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+      {# formerly "header.html" #}
+      {% if current_path == "/" %}
+      <header class="header bg-img-home">
+        <h1>My Zola Blog</h1>
+      </header>
+      {% elif current_path == "/blog/" %}
+      <header class="header bg-img-blog">
+      </header>
+      {% else %}
+      <header class="header">
+      </header>
+      {% endif %}
       <div class="main">
         {% block content %} {% endblock content %}
       </div>
       {% block postlist %} {% endblock postlist %}
-      {% include "footer.html" %}
+      {#- formerly "footer.html" -#}
+      <footer class="footer flex-footer-container">
+        <div>
+          Built with Zola & NetlifyCMS
+        </div>
+        <div>
+          <small>
+            Boot logo modified from:
+            <a href="https://commons.wikimedia.org/wiki/File:Bergschuh_Leder_um_1982.jpg" title="via Wikimedia Commons"> Joadl</a> / <a href="https://creativecommons.org/licenses/by-sa/3.0/at/deed.en">CC BY-SA 3.0 AT</a>
+          </small>
+        </div>
+      </footer>
     </div>
-    {% include "script-2.html" %}
+    {#- formerly "script-2.html" -#}
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {reverseNavColors()};
+      function reverseNavColors() {
+        var navbar = document.getElementsByTagName("nav")[0];
+        if (document.body.scrollTop > 54 || document.documentElement.scrollTop > 54) {
+          navbar.className = "reverse-colors" + " animate-opacity";
+        }
+        else {
+          navbar.className = navbar.className.replace("reverse-colors animate-opacity", "");
+        }
+      }
+    </script>
   </body>
 </html>

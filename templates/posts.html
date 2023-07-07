@@ -1,10 +1,10 @@
-<!-- Use get_section for site index page -->
-{% if current_path == "/" %}
-  {% set section = get_section(path="blog/_index.md") %}
-  {% set x = 3 %}
-{% else %}
-  {% set x = 100 %}
-{% endif %}
+{#- List of posts -#}
+{%- if current_path == "/" -%}
+  {%- set section = get_section(path="blog/_index.md") -%}
+  {%- set x = 3 -%}
+{%- else -%}
+  {%- set x = 100 -%}
+{%- endif -%}
 <div class="post-list">
 {% for page in section.pages | slice(end=x) %}
   <div class="card">
