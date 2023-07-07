@@ -1,5 +1,7 @@
 +++
 title = "Spain and Portugal"
+[taxonomies]
+tags = ["Spain", "Portugal", "Europe"]
 [extra]
 featured_img = "/images/plaza_de_espana_small.jpg"
 +++

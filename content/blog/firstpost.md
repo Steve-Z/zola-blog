@@ -1,6 +1,8 @@
 +++
 title = "Sometimes it Snows in April"
 date = "2020-04-30"
+[taxonomies]
+tags = ["Minnesota"]
 [extra]
 featured_img = "/images/april_snow.jpg"                      
 +++

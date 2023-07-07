@@ -1,6 +1,13 @@
 +++
 title = "My Trip to Japan"
 date = "2020-04-30"
+[taxonomies]
+tags = [
+    "Japan",
+    "Asia",
+    "temples",
+    "textiles",
+]
 [extra]
 featured_img = "/images/golden_temple_small.jpg"
 +++
