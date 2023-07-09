@@ -1,19 +1,19 @@
-{#- List of posts -#}
+{#- List of posts #}
 {%- if current_path == "/" -%}
   {%- set section = get_section(path="blog/_index.md") -%}
   {%- set x = 3 -%}
 {%- else -%}
   {%- set x = 100 -%}
-{%- endif -%}
-<div class="post-list">
-{% for page in section.pages | slice(end=x) %}
-  <div class="card">
-    <img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}">
-    <div>
-      <h2><a href="{{ page.permalink  | safe }}">{{ page.title }}</a></h2>
-      <p>{{ page.date }}</p>
-      {{ page.summary | safe }}
-    </div>
-  </div>
-{% endfor %}
-</div>
+{%- endif %}
+      <div class="post-list">
+      {%- for page in section.pages | slice(end=x) %}
+        <div class="card">
+          <img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}">
+          <div>
+            <h2><a href="{{ page.permalink  | safe }}">{{ page.title }}</a></h2>
+            <p>{{ page.date }}</p>
+            {{ page.summary | safe }}
+          </div>
+        </div>
+      {%- endfor %}
+      </div>

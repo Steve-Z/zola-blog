@@ -1,10 +1,10 @@
 {% extends "base.html" %}
-
-{% block content %}
-<h1>
-  {{ page.title }}
-</h1>
-<p><strong>{{ page.date }}</strong></p>
-<img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}">
-{{ page.content | safe }}
-{% endblock content %}
+{% block content -%}
+        <h1>
+          {{ page.title }}
+        </h1>
+        <p><strong>{{ page.date }}</strong></p>
+        <img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}">
+{% set pre = "        " -%}
+{{ page.content | indent(prefix=pre, first=true) | safe }}
+{%- endblock content %}

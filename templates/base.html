@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico">
-    {#- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> -#}
+    {#- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script> #}
   </head>
   <body>
     <div class="grid-container fluid-type">
@@ -16,16 +16,16 @@
         <img src="/images/boot_logo.png" alt="boot_logo">
       </div>
       <div class="nav-bar sticky-top">
-        {#- formerly "navigation.html" -#}
+        {#- formerly "navigation.html" #}
         <nav>
           <div class="pad-sides flex-nav-container">
-            {% for item in config.extra.navigation %}
+            {%- for item in config.extra.navigation %}
             <div>
               <a href="{{ item.url }}">
                 {{ item.name }}
               </a>
             </div>
-            {% endfor %}
+            {%- endfor %}
           </div>
         </nav>
       </div>
@@ -40,11 +40,11 @@
       {%- else %}
       <header class="header">
       </header>
-      {% endif %}
+      {%- endif %}
       <div class="main">
         {% block content %} {% endblock content %}
       </div>
-      {% block postlist %} {% endblock postlist %}
+      {%- block postlist %} {% endblock postlist %}
       {#- formerly "footer.html" #}
       <footer class="footer flex-footer-container">
         <div>
