@@ -3,11 +3,13 @@
 <!-- Borrowed from PaperMod theme -->
         <div>
           <h1>{{ terms | length }} Tags</h1>
-          {% for term in terms -%}
-          <p><a href="{{ term.permalink }}" class="tag">
-            {{ term.name }}
-            {{ term.page_count }}
-          </a></p>
-          {%- endfor %}
+          <div class="flex-tag-container">
+            {% for term in terms -%}
+            <a href="{{ term.permalink }}" class="tag">
+              {{ term.name }}
+              {{ term.page_count }}
+            </a>
+            {%- endfor %}
+          </div>
         </div>
 {%- endblock %}

@@ -235,6 +235,12 @@ nav {
 // .flex-nav-container :last-child {
 //   flex: 0 0 auto;
 // }
+.flex-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em 0.5em;
+}
 .fluid-type {
   font-size: 0.75rem;
 }
