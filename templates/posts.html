@@ -13,6 +13,13 @@
             <h2><a href="{{ page.permalink  | safe }}">{{ page.title }}</a></h2>
             <p>{{ page.date }}</p>
             {{ page.summary | safe }}
+            <div class="flex-tag-container">
+              {% for tag in page.taxonomies.tags -%}
+              <a href="tags/{{ tag | lower }}" class="tag">
+                {{ tag }}
+              </a>
+              {%- endfor %}
+            </div>
           </div>
         </div>
       {%- endfor %}
