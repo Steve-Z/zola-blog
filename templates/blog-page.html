@@ -7,4 +7,11 @@
         <img src="{{ page.extra.featured_img }}" alt="{{ page.extra.featured_img | split(pat='/') | last }}">
 {% set pre = "        " -%}
 {{ page.content | indent(prefix=pre, first=true) | safe }}
+        <div class="flex-tag-container">
+          {% for tag in page.taxonomies.tags -%}
+          <a href="{{ config.base_url }}/tags/{{ tag | lower }}" class="tag">
+            {{ tag }}
+          </a>
+          {%- endfor %}
+        </div>
 {%- endblock content %}
