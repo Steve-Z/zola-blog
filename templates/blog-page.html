@@ -9,7 +9,8 @@
 {{ page.content | indent(prefix=pre, first=true) | safe }}
         <div class="flex-tag-container">
           {% for tag in page.taxonomies.tags -%}
-          <a href="{{ config.base_url }}/tags/{{ tag | slugify }}" class="tag">
+          {% set url = get_taxonomy_url(kind="tags", name=tag, lang=page.lang) -%}
+          <a href="{{ url }}" class="tag">
             {{ tag }}
           </a>
           {%- endfor %}
