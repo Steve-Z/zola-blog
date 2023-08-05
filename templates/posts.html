@@ -15,7 +15,7 @@
             {{ page.summary | safe }}
             <div class="flex-tag-container">
               {% for tag in page.taxonomies.tags -%}
-              <a href="tags/{{ tag | lower }}" class="tag">
+              <a href="tags/{{ tag | slugify }}" class="tag">
                 {{ tag }}
               </a>
               {%- endfor %}
