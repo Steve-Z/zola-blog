@@ -220,7 +220,7 @@ nav {
   justify-content: center;
 }
 .flex-nav-container > * {
-  flex: 0 1 6em;
+  flex-basis: 4em; // Adjust with @media below
   text-align: center;
 }
 .flex-footer-container {
@@ -249,10 +249,16 @@ nav {
   .fluid-type {
       font-size: calc(13.5px + 4.5 * (100vw - 750px) / 274);
   }
+  .flex-nav-container > * {
+    flex-basis: 5em;
+  }
 }
 @media (min-width: 1024px) { /*, (min-height: 1300px) { */
   .fluid-type {
       font-size: 1rem;
+  }
+  .flex-nav-container > * {
+    flex-basis: 6em;
   }
 }
 .footer {
