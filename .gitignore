@@ -2,6 +2,9 @@
 public
 .netlify
 
+# Files created by resize_image
+processed_images
+
 # Files I create for troubleshooting
 tera_context*
 
