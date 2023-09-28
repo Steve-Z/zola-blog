@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-
+{% block head -%}
+  <title>{{ section.title }}</title>
+{%- endblock head %}
 {% block content -%}
 {{ section.content | indent(prefix="        ") | safe }}
         <hr>

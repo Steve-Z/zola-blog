@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block head -%}
+  <title>{{ section.title }}</title>
+{%- endblock head %}
 {% block content -%}
         <img src="{{ section.extra.featured_img }}" alt="{{ section.extra.featured_img | split(pat='/') | last }}">
 {{ section.content | indent(prefix="        ", first=true) | safe }}

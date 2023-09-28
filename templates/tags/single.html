@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+{% block head -%}
+  <title>Pages tagged "{{ term.name }}"</title>
+{%- endblock head %}
 <!-- Borrowed from Abridge theme -->
 {%- block content -%}
         <div>
